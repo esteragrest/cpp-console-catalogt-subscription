@@ -5,7 +5,7 @@
 
 struct stoimost
 {
-    int cena;
+    double cena;
 
 };
 
@@ -18,10 +18,10 @@ struct kategori
 
 struct product_catalog
 {
-    stoimost reader;
-    kategori start;
-    kategori finish;
-    stoimost author;
+    kategori reader;
+    stoimost start;
+    stoimost finish;
+    kategori author;
     char nazvanie[MAX_STRING_SIZE];
 };
 
