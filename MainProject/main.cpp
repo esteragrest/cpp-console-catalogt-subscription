@@ -20,14 +20,12 @@ int main()
         cout << "***** Каталог товаров *****\n\n";
         for (int i = 0; i < size; i++)
         {
-            cout << subscriptions[i]->reader.last_kateg << '\n';
-            cout << subscriptions[i]->reader.first_kateg << '\n';
-            cout << subscriptions[i]->reader.middle_kateg << '\n';
-            cout << subscriptions[i]->finish.cena << '\n ';
-            cout << subscriptions[i]->start.cena << '\n ';
-            cout << subscriptions[i]->author.last_kateg << '\n';
-            cout << subscriptions[i]->author.first_kateg << '\n';
-            cout << subscriptions[i]->author.middle_kateg << '\n';
+
+            cout << subscriptions[i]->nuz.first_kateg << '\n';
+
+            cout << subscriptions[i]->pocup.cena << '\n ';
+            cout << subscriptions[i]->sklad.kol << '\n ';
+
             cout << subscriptions[i]->nazvanie << '\n';
             cout << '\n';
         }
