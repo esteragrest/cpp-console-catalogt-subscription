@@ -24,16 +24,11 @@ void read(const char* file_name, product_catalog* array[], int& size)
         while (!file.eof())
         {
             product_catalog* item = new product_catalog;
-            file >> item->reader.last_kateg;
-            file >> item->reader.first_kateg;
-            file >> item->reader.middle_kateg;
+            file >> item->nuz.first_kateg;
             file >> tmp_buffer;
-            item->start = convert(tmp_buffer);
+            item->pocup = convert(tmp_buffer);
             file >> tmp_buffer;
-            item->finish = convert(tmp_buffer);
-            file >> item->author.last_kateg;
-            file >> item->author.first_kateg;
-            file >> item->author.middle_kateg;
+            item->sklad = convert(tmp_buffer);
             file.read(tmp_buffer, 1); // чтения лишнего символа пробела
             file.getline(item->nazvanie, MAX_STRING_SIZE);
             array[size++] = item;

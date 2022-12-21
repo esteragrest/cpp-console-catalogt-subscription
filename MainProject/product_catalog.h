@@ -6,22 +6,20 @@
 struct stoimost
 {
     double cena;
+    int kol;
 
 };
 
 struct kategori
 {
     char first_kateg[MAX_STRING_SIZE];
-    char middle_kateg[MAX_STRING_SIZE];
-    char last_kateg[MAX_STRING_SIZE];
 };
 
 struct product_catalog
 {
-    kategori reader;
-    stoimost start;
-    stoimost finish;
-    kategori author;
+    kategori nuz;
+    stoimost pocup;
+    stoimost sklad;
     char nazvanie[MAX_STRING_SIZE];
 };
 
