@@ -11,7 +11,8 @@ int main()
     setlocale(LC_ALL, "Russian");
     cout << "Лабораторная работа №9. GIT\n";
     cout << "Вариант №10. Каталог товаров\n";
-    cout << "Автор: Провальская Дарья\n\n";
+    cout << "Автор: Провальская Дарья\n";
+    cout << "12 группа\n\n";
     product_catalog* subscriptions[MAX_FILE_ROWS_COUNT];
     int size;
     try
@@ -20,13 +21,18 @@ int main()
         cout << "***** Каталог товаров *****\n\n";
         for (int i = 0; i < size; i++)
         {
-
-            cout << subscriptions[i]->nuz.first_kateg << '\n';
-
-            cout << subscriptions[i]->pocup.cena << '\n ';
-            cout << subscriptions[i]->sklad.kol << '\n ';
-
-            cout << subscriptions[i]->nazvanie << '\n';
+            cout << "Стоимость одного товара........: ";
+            //вывод стоимость одного товара
+            cout << subscriptions[i]->cena << endl;
+            cout << "Кол-во товаров на складе........: ";
+            //вывод кол-ва товаров на складе
+            cout << subscriptions[i]->kol << endl;
+            cout << "Категория........: ";
+            //вывод категории товара
+            cout << subscriptions[i]->kat << endl;
+            cout << "Название товара........: ";
+            //вывод названия товара
+            cout << subscriptions[i]->nazvanie << endl;
             cout << '\n';
         }
         for (int i = 0; i < size; i++)
@@ -38,5 +44,14 @@ int main()
     {
         cout << error << '\n';
     }
+
+    cout << "Laboratory work #9. GIT\n";
+    cout << "Variant #10. Product catalog\n";
+    cout << "Author: Provalskaya Darya\n";
+    cout << "Group: 12\n";
+    
     return 0;
+
 }
+
+
