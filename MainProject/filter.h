@@ -4,54 +4,19 @@
 #include "product_catalog.h"
 
 product_catalog** filter(product_catalog* array[], int size, bool (*check)(product_catalog* element), int& result_size);
-
-/*
-  <function_name>:
-              ,
-          true,
-    ,
-
-:
-    array       -
-    size        -
-    check       -    .
-
-                   ,
-    result_data - ,    - ,
+bool check_prod_by_kat(product_catalog* element);
+bool check_prod_by_cena(product_catalog* element);
+void Selectionsort(product_catalog** subscriptions, int size);
+void merge(product_catalog** subscriptions, int size);
+void Selectionsort_str(product_catalog** subscriptions, int size);
+void merge_str(product_catalog** subscriptions, int size);
+void cena_sort(product_catalog** subscriptions, int size);
 
 
 
-          ,
-     (     true)
-*/
 
 
-bool check_book_subscription_by_100r(product_catalog* element);
 
-/*
-  check_book_subscription_by_author:
-      - ,
-
-:
-    element -   ,
-
-
-    true,           ,  false
-*/
-
-
-bool check_book_subscription_promtovar(product_catalog* element);
-
-/*
-  check_book_subscription_by_date:
-      - ,           2021-
-
-:
-    element -   ,
-
-
-    true,           2021- ,  false
-*/
 
 #endif
 

@@ -10,6 +10,7 @@ struct product_catalog
     int kol;
     double cena;
     char nazvanie[MAX_STRING_SIZE];
+    int length;
 };
 
 #endif
