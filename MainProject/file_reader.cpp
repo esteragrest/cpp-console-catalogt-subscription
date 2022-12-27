@@ -18,11 +18,11 @@ void read(const char* file_name, product_catalog* array[], int& size)
             product_catalog* item = new product_catalog;
             
             file >> item->cena;
-            //file >> tmp_buffer;
+            
             file >> item->kol;
-            //file >> tmp_buffer;
+            
             file >> item->kat;
-            //file >> tmp_buffer;
+            
             file.read(tmp_buffer, 2); // чтения лишнего символа пробела
             file.getline(item->nazvanie, MAX_STRING_SIZE);
             array[size++] = item;
