@@ -6,6 +6,7 @@ using namespace std;
 #include "file_reader.h"
 #include "constants.h"
 #include "filter.h"
+#include "processing.h"
 
 void output(product_catalog* subscriptions)
 {
@@ -42,6 +43,8 @@ int main()
         {
             output(subscriptions[i]);
         }
+        int stoim = process(subscriptions, size);
+        cout << "Стоимость всех товаров в каталоге: " << stoim<<" рублей.\n\n";
         bool (*check_function)(product_catalog*) = NULL;
         cout << "\nВыберите способ фильтрации или обработки данных:\n";
         cout << "1) Вывести все товары в категории «Промтовары».\n";
@@ -100,11 +103,13 @@ int main()
             }
             delete[] filtered;
         }
+        
         for (int i = 0; i < size; i++)
         {
             delete subscriptions[i];
         }
     }
+   
     catch (const char* error)
     {
         cout << error << '\n';
