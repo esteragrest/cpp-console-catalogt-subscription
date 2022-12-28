@@ -1,6 +1,9 @@
 #include "pch.h"
 #include "CppUnitTest.h"
 
+#include "../MainProject/product_catalog.h"
+#include "../MainProject/processing.h"
+
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace unittestproject
@@ -11,7 +14,7 @@ namespace unittestproject
 		
 		TEST_METHOD(TestMethod1)
 		{
-			Assert::Fail();
+			
 		}
 	};
 }
